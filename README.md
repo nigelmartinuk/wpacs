@@ -1,5 +1,2 @@
-# wpacs
-# original: waterbits was submitted as project 20210524 MVP before finishing, with
-# no possibility of completion. This repository represents the "further" work area.
-#
-# This is a simple basic handcoded website.
+# wpacs: waterbits was an unfinished MVP coursework submission. This repository represents the "further" work area.
+# This is a simple handcoded website.
