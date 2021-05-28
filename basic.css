@@ -2,40 +2,68 @@
 nme@20210521 
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Pattaya&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Pattaya&display=swap");
 
 :root {
   --darker-colour: #777;
   --lighter-colour: #fff;
+  --min-site-width: 300;
 }
 
-body, h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lato', 'Arial Narrow', Helvetica, sans-serif;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", "Arial Narrow", Helvetica, sans-serif;
   margin: 0;
-	padding: 0;
-	border: 0;
-	vertical-align: baseline;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
 }
 
 body,
 html {
-  height: 100%;
-  max-width: 600px;
-  min-width: 400px;
-  margin: 50px 100px 50px 100px;
-  color: var( --darker-colour);
+  max-width: 800px;
+  min-width: var( --min-site-width);
+  /* margin: 50px 100px 50px 100px; */
+  margin: 50px 50px 0px 50px;
+  color: var(--darker-colour);
   line-height: 1.8;
 }
 
-nav {
-  background-color: var( --darker-colour);
-  position: fixed;
-  left: 0;
-  top: 0;
+footer {
+  display: block;
+  background-color: var(--darker-colour);
+  color: var(--lighter-colour);
+  min-width: var( --min-site-width);
+  bottom: 0;
+  height: 50px;
   padding: 10px;
+  text-align: center;
 }
 
-nav>a {
+nav {
+  display: block;
+  color: var(--lighter-colour);
+  position: fixed;
+  background-color: var(--darker-colour);
+  color: var(--lighter-colour);
+  min-width: var( --min-site-width);;
+  top: 0;
+  height: 50px;
+}
+/*nav {
+  background-color: var(--darker-colour);
+  color: var(--lighter-colour);
+  position: fixed;
+  top: 0;
+  min-width: 90vw;
+}*/
+
+nav > a {
   display: inline-block;
   font-size: 1.2rem;
   padding: 5px;
@@ -43,11 +71,13 @@ nav>a {
   color: var(--lighter-colour);
 }
 
-nav>a:link, nav>a:visited, nav>a:active {
+nav > a:link,
+nav > a:visited,
+nav > a:active {
   text-decoration: none;
 }
 
-nav>a:hover {
+nav > a:hover {
   background-color: var(--lighter-colour);
   color: var(--darker-colour);
 }
@@ -57,7 +87,8 @@ h3 {
   text-transform: uppercase;
 }
 
-h3, h4 {
+h3,
+h4 {
   font-size: 2rem;
   text-align: center;
 }
@@ -72,6 +103,7 @@ h6 {
 
 #services {
   min-width: 80vw;
+  margin-bottom: 5px;
 }
 
 #services_intro {
@@ -80,7 +112,7 @@ h6 {
 }
 
 #service_offer {
-  border-color: var( --darker-colour);
+  border-color: var(--darker-colour);
   border-width: 1px;
   border-style: solid;
 }
@@ -88,28 +120,53 @@ h6 {
 #service_affiliate {
   display: flex;
   flex-direction: row;
-  border-color: var( --darker-colour);
+  border-color: var(--darker-colour);
   border-width: 1px;
   border-style: solid;
 }
 
-#service_affiliate>div {
+#service_affiliate > div {
   margin: 0 auto;
-  width: 450px;
+  width: var( --min-site-width);
   padding: 5px;
 }
 
-#service_affiliate>div>a>img {
+#service_affiliate > div > a > img {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  min-width: var( --min-site-width);
+}
+
+@media (min-width:200px) and (max-width: 400px) {
+  #service_affiliate {
+    flex-direction: column;
+    background-color: aqua;
+  }
+  html,
+  body {
+    /*margin: 50px 5px 50px 5px; */
+    margin: 50px 0px 0px 5px;
+  }
 }
 
 @media (max-width: 800px) {
   #service_affiliate {
     flex-direction: column;
   }
-  html,body {
-    margin: 50px 5px 50px 5px;
+  html,
+  body {
+    /*margin: 50px 5px 50px 5px; */
+    margin: 50px 0px 0px 5px;
+  }
+}
+
+@media (max-width: 800px) {
+  #service_affiliate {
+    flex-direction: column;
+  }
+  html,
+  body {
+    /*margin: 50px 5px 50px 5px; */
+    margin: 50px 0px 0px 5px;
   }
 }
