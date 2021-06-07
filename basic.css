@@ -137,7 +137,7 @@ h6 {
   min-width: var( --min-site-width);
 }
 
-@media (min-width:200px) and (max-width: 400px) {
+@media (min-width:200px) and (max-width: 300px) {
   #service_affiliate {
     flex-direction: column;
     background-color: aqua;
