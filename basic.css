@@ -16,7 +16,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+span {
   font-family: "Lato", "Arial Narrow", Helvetica, sans-serif;
   margin: 0;
   padding: 0;
@@ -26,7 +27,7 @@ h6 {
 
 body,
 html {
-  max-width: 800px;
+  max-width: 110vw;
   min-width: var( --min-site-width);
   /* margin: 50px 100px 50px 100px; */
   margin: 50px 50px 0px 50px;
@@ -40,35 +41,39 @@ footer {
   color: var(--lighter-colour);
   min-width: var( --min-site-width);
   bottom: 0;
-  height: 50px;
+
   padding: 10px;
   text-align: center;
 }
 
 nav {
-  display: block;
+  display: flex;
   color: var(--lighter-colour);
   position: fixed;
   background-color: var(--darker-colour);
   color: var(--lighter-colour);
-  min-width: var( --min-site-width);;
+  min-width: var( --min-site-width);
   top: 0;
-  height: 50px;
 }
-/*nav {
-  background-color: var(--darker-colour);
-  color: var(--lighter-colour);
-  position: fixed;
-  top: 0;
-  min-width: 90vw;
-}*/
 
 nav > a {
   display: inline-block;
   font-size: 1.2rem;
-  padding: 5px;
+  padding: 10px;
+  border-style: solid;
   text-transform: uppercase;
   color: var(--lighter-colour);
+}
+
+nav > div > a {
+  display: inline-block;
+  font-size: 1.2rem;
+  border-style: solid;
+  padding: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--lighter-colour);
+  color: var(--darker-colour);
 }
 
 nav > a:link,
@@ -80,6 +85,7 @@ nav > a:active {
 nav > a:hover {
   background-color: var(--lighter-colour);
   color: var(--darker-colour);
+  border-style: solid;
 }
 
 /* website page introduction headers */
