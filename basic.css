@@ -7,7 +7,7 @@ nme@20210521
 :root {
   --darker-colour: #777;
   --lighter-colour: #fff;
-  --min-site-width: 300;
+  --min-site-width: 250px;
 }
 
 body,
@@ -24,13 +24,16 @@ span {
   border: 0;
   vertical-align: baseline;
 }
+* {
+  box-sizing: border-box;
+}
 
 body,
 html {
   max-width: 110vw;
   min-width: var( --min-site-width);
-  /* margin: 50px 100px 50px 100px; */
-  margin: 50px 50px 0px 50px;
+  margin: 25px 0px 0px 5px;
+  padding: 5px;
   color: var(--darker-colour);
   line-height: 1.8;
 }
@@ -41,7 +44,7 @@ footer {
   color: var(--lighter-colour);
   min-width: var( --min-site-width);
   bottom: 0;
-
+  margin: 0px auto auto 0px;
   padding: 10px;
   text-align: center;
 }
@@ -58,7 +61,7 @@ nav {
 
 nav > a {
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1em;
   padding: 10px;
   border-style: solid;
   text-transform: uppercase;
@@ -67,7 +70,7 @@ nav > a {
 
 nav > div > a {
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1em;
   border-style: solid;
   padding: 10px;
   text-transform: uppercase;
@@ -107,9 +110,24 @@ h6 {
   font-size: 1.1rem;
 }
 
+.prod {
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.prodheight {
+  max-width: 150px;
+  height: auto;
+}
+
+.prodwidth {
+  width: auto;
+  max-height: 150px;
+}
+
 #services {
-  min-width: 80vw;
-  margin-bottom: 5px;
+  margin: 5px;
 }
 
 #services_intro {
@@ -132,47 +150,37 @@ h6 {
 }
 
 #service_affiliate > div {
-  margin: 0 auto;
-  width: var( --min-site-width);
-  padding: 5px;
-}
-
-#service_affiliate > div > a > img {
   display: flex;
   flex-direction: column;
-  min-width: var( --min-site-width);
+  margin: 0 auto;
+  padding: 1px;
 }
 
-@media (min-width:200px) and (max-width: 300px) {
-  #service_affiliate {
-    flex-direction: column;
-    background-color: aqua;
-  }
+.servimg {
+  width: 85%;
+}
+
+@media (min-width: 1280px) {
   html,
   body {
-    /*margin: 50px 5px 50px 5px; */
-    margin: 50px 0px 0px 5px;
+    max-width: 1030px;
+    margin: 25px 25% 0px 25%;
   }
 }
 
-@media (max-width: 800px) {
-  #service_affiliate {
-    flex-direction: column;
-  }
+@media (min-width: 700px) {
   html,
   body {
-    /*margin: 50px 5px 50px 5px; */
-    margin: 50px 0px 0px 5px;
+    margin: 25px 10% 0px 5%;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   #service_affiliate {
     flex-direction: column;
   }
   html,
   body {
-    /*margin: 50px 5px 50px 5px; */
-    margin: 50px 0px 0px 5px;
+    margin: 25px 0px 5px 0px;
   }
 }
